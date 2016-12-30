@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h3>Hi team, you have one new message!</h3>
+		<p>
+			welcome to - ${company}
+		</p>
+		<p>
+			an - ${logo}
+		</p>
+		<p>
+			based - ${place}
+		</p>
+		
+	</body>
+
+</html>

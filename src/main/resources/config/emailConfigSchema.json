@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "sendTo": {
+      "type": "array",
+      "items": {
+        "type": "string", "format": "email"
+      }
+    },
+    "ccTo": {
+      "type": "array",
+      "items": {
+        "type": "string", "format": "email"
+      }
+    },
+    "bccTo": {
+      "type": "array",
+      "items": {
+       "type": "string", "format": "email"
+      }
+    },
+    "subject": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string", "format": "email"
+    },
+    "mailServerDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "host": {
+            "type": "string"
+          },
+          "port": {
+            "type": "integer"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "TLS": {
+            "type": "string"
+          },
+          "protocol": {
+            "type": "string",
+			"default": "smtp",
+            "enum": [
+          "smtp",
+          "imap"
+        ]
+          }
+        }
+        
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "fileLocation": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "fileLocation"
+       
+        ]
+      }
+    }
+ ,
+    
+    "template": {
+     "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+         
+         "templateParameters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }}}, 
+        "required": [
+          "name",
+          "location"
+        ]
+              
+         
+         
+         
+         
+         
+        }
+        
+      }
+    }
+  }
+  
+}

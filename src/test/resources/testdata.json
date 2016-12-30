@@ -1,0 +1,46 @@
+{
+  "sendTo": [
+    "email1@xyz.com",
+    "email4@xyz.com"
+ 
+  ],
+  "ccTo": [
+    "email2@xyz.com"
+    
+  ],
+  "bccTo": [
+    "email3@xyz.com"
+  ],
+  "subject": "Welcome to Axway",
+  "from": "araiserver@xyz.com",
+  "attachments": [
+    {
+      "name": "agastya.jpg",
+      "fileLocation": "C:\\Users\\arai\\Desktop\\agastya.jpg",
+      "type": "pdf"
+    },
+     {
+      "name": "agastya2.jpg",
+      "fileLocation": "C:\\Users\\arai\\Desktop\\agastya.jpg",
+      "type": "pdf"
+    }
+  ],
+  "template": {
+    "name": "tem.vm",
+    "location": "velocity/new_contact_message.vm",
+    "templateParameters": [
+      {
+        "name": "company",
+        "value": "Axway"
+      },
+      {
+        "name": "logo",
+        "value": "An API Compnay"
+      },
+      {
+        "name": "place",
+        "value": "Australia"
+      }
+    ]
+  }
+}
